@@ -1,0 +1,137 @@
+.inputArea {
+  padding: 1.5rem;
+  background: #343541;
+  border-top: 1px solid #444654;
+}
+
+.inputContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.emojiPicker {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #202123;
+  border: 1px solid #444654;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow-x: auto;
+}
+
+.emojiButton {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.emojiButton:hover {
+  background: #2a2b32;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  background: #40414f;
+  border: 1px solid #444654;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.inputWrapper:focus-within {
+  border-color: #10a37f;
+}
+
+.emojiToggle {
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  color: #8e8ea0;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.emojiToggle:hover:not(:disabled) {
+  color: white;
+}
+
+.emojiToggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  resize: none;
+  max-height: 200px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.textarea::placeholder {
+  color: #8e8ea0;
+}
+
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sendButton {
+  padding: 0.5rem;
+  background: #10a37f;
+  color: white;
+  border-radius: 6px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #0e8c6f;
+}
+
+.sendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #444654;
+}
+
+@media (max-width: 768px) {
+  .inputArea {
+    padding: 1rem;
+  }
+
+  .inputWrapper {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .textarea {
+    font-size: 0.9375rem;
+  }
+
+  .emojiPicker {
+    left: 0;
+    right: 0;
+    max-width: none;
+  }
+}

@@ -1,0 +1,155 @@
+.chatArea {
+  flex: 1;
+  overflow-y: auto;
+  background: #343541;
+  position: relative;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  color: #8e8ea0;
+  font-size: 1rem;
+}
+
+.messages {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.messageWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.messageContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.messageAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  background: #444654;
+}
+
+.userMessageWrapper .messageAvatar {
+  background: #10a37f;
+}
+
+.assistantMessageWrapper .messageAvatar {
+  background: #5436da;
+}
+
+.messageContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.messageBubble {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.userMessage {
+  background: #343541;
+  color: white;
+  border: 1px solid #444654;
+}
+
+.assistantMessage {
+  background: #444654;
+  color: white;
+}
+
+.timestamp {
+  color: #8e8ea0;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+.typingIndicator {
+  display: flex;
+  gap: 4px;
+  padding: 0.25rem 0;
+}
+
+.typingIndicator span {
+  width: 8px;
+  height: 8px;
+  background: #8e8ea0;
+  border-radius: 50%;
+  animation: typing 1.4s infinite;
+}
+
+.typingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .messages {
+    padding: 1rem 0.75rem;
+  }
+
+  .messageContainer {
+    gap: 0.75rem;
+  }
+
+  .messageAvatar {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .messageBubble {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9375rem;
+  }
+}
